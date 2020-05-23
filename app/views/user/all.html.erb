@@ -1,0 +1,14 @@
+<% provide(@user) %> 
+<% provide :title , "View Detail User" %> 
+<div class="row">
+<aside class="col-md-4"> 
+	<section class="user_info">
+		<% @user.each |item| do %> 
+		<h1><%= item.name %> 
+			<%= gravatar_for item %></h1>
+		<h1><%= item.email %></h1>
+		<h1><%= item.created_at %></h1>
+		<% end %> 
+	</section>
+</aside> 
+</div>
